@@ -1,0 +1,7 @@
+<nav class="l-{{ include.section }}_u-word-special-list-wrap u-word-special-list-wrap"><ul class="u-word-special-list">{% for categories in site.data.categories.[include.section] %}
+	<li class="u-word-special-list-item">
+		<input type="radio" id="radiobtn-{{ include.section }}-content-nav-p-{{ forloop.index }}" class="radiobtn-contact-content-nav-p" name="{{ include.section }}-buttons"{% if forloop.first %} checked{% endif %} />
+		<label for="radiobtn-{{ include.section }}-content-nav-p-{{ forloop.index }}" class="u-word-special u-link">{% for category in categories %}{{ category.title`| replace: "[", "<span class='u-word-special-accent'>" | replace: "]", "</span>" }}{% endfor %}</label>
+		<p class="contact-content-nav-p-{{ forloop.index }} contact-content-nav-p">{% for category in categories %}{{ category.details | split: "[" | first }} {{ category.details | split: "]" | last }}{% endfor %}</p>
+	</li>{% endfor %}
+</ul></nav>

@@ -1,0 +1,13 @@
+---
+layout: assets
+---
+{% capture curlyBracesFrom %}{% raw %}}/* {% endraw %}{% endcapture %}{% capture curlyBracesTo %}{% raw %}}
+/* {% endraw %}{% endcapture %}
+{{ content | split: "/*=== CUSTOM ===*/" | first }}/*=== CUSTOM ===*/
+{{ content | split: "/*=== CUSTOM ===*/" | last | strip_newlines | replace: '	', '' | replace: '==*/', '==*/
+' | replace: '**/', '**/
+		' | replace: '/**', '
+/**' | replace: curlyBracesFrom, curlyBracesTo | replace: '
+
+', '
+' | replace: '/*** ', '	/*** ' | replace: ': ', ':' | replace: ': "', ':"' | replace: ': [', ':[' | replace: ', {', ',{' | replace: ' {', '{' | replace: '{ ', '{' | replace: '; ', ';' | replace: ' =', '=' | replace: '= ', '=' | replace: '/*==[', '/*== [' }}

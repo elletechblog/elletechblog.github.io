@@ -1,0 +1,95 @@
+---
+---
+{% include config/setup %}
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		
+		<meta name="HandheldFriendly" content="true" />
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-title" content="{{ site.name }}" />
+		<meta name="apple-mobile-touch-fullscreen" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="description" content="{{ site.description }}" />
+		<title>{{ pageTitle }}</title>
+		
+		<link rel="index" content="{{ pageDomain }}" />
+		<link rel="webmention" content="" />
+		
+		<link rel="icon" href="{{ pageDomain }}/favicon.png" />
+		
+		{% for faviconSize in site.favicons.icon %}
+		<link rel="icon" type="image/png" sizes="{{ faviconSize }}x{{ faviconSize }}" href="{{ pageDomain }}/assets/images/favicons/vexxia-logo-icon-{{ faviconSize }}.png" />{% endfor %}
+		{% for faviconSize in site.favicons.apple-touch-icon %}
+		<link rel="apple-touch-icon" sizes="{{ faviconSize }}x{{ faviconSize }}" href="{{ pageDomain }}/assets/images/favicons/vexxia-logo-icon-{{ faviconSize }}.png" />{% endfor %}
+		{% for faviconSize in site.favicons.apple-touch-icon-precomposed %}
+		<link rel="apple-touch-icon-precomposed" sizes="{{ faviconSize }}x{{ faviconSize }}" href="{{ pageDomain }}/assets/images/favicons/vexxia-logo-icon-{{ faviconSize }}.png" />{% endfor %}
+		
+		<meta name="msapplication-TileColor" content="#ffffff" />
+		<meta name="msapplication-TileImage" content="{{ pageDomain }}/assets/images/favicons/vexxia-logo-icon-144.png" />{% for faviconSize in site.favicons.msapplication-square %}
+		<meta name="msapplication-square{{ faviconSize }}x{{ faviconSize }}.png" content="{{ pageDomain }}/assets/images/favicons/vexxia-logo-icon-{{ faviconSize }}.png" />{% endfor %}<meta name="msapplication-square310x150.png" content="{{ pageDomain }}/assets/images/vexxia-logo-name-black-310x150.png" />
+		
+		<meta rel="author" href="{{ pageDomain }}/humans.txt" type="text/plain" />
+		<meta name="copyright" content="{{ site.name }}" />
+		<meta name="generator" content="{{ site.generator }}" />
+		
+		<!--
+		<meta name="google-site-verification" content="" />
+		<meta name="yandex-verification" content="" />
+		<meta name="msvalidate.01" content="" />
+		<meta name="alexaVerifyID" content="" />
+		<meta name="norton-safeweb-site-verification" content="" />
+		-->
+		
+		<!-- Schema.org data -->
+		<meta content="{{ pageTitle }}" />
+		<meta content="{{ pageDescription }}" />
+		<meta content="true" />
+		<meta content="{{ pageDomain }}/assets/images/havah-logo-full-black.png" />
+		
+		<!-- Twitter Card data -->
+		<meta name="twitter:card" content="summary" />
+		<meta name="twitter:site" content="@{{ site.social }}" />
+		<meta name="twitter:creator" content="{{ site.social }}" />
+		<meta name="twitter:title" content="{{ pageTitle }}" />
+		<meta name="twitter:description" content="{{ pageDescription }}" />
+		<meta name="twitter:image" content="{{ pageDomain }}/assets/images/havah-logo-full-black.png" />
+		<meta name="twitter:image:alt" content="Logo of {{ site.name }}, {{ site.description | downcase }}" />
+		
+		<!-- Open Graph data -->
+		<meta property="og:locale" content="en" />
+		<meta property="og:type" content="website" />
+		<meta property="og:title" content="{{ pageTitle }}" />
+		<meta property="og:description" content="{{ pageDescription }}" />
+		<meta property="og:url" content="{{ pageDomain }}" />
+		<meta property="og:site_name" content="{{ site.name }}" />
+		<meta property="og:image" content="{{ assetsDomain }}/images/havah-logo-full-black.png"/>{% if site.facebook %}
+		<meta property="fb:admins" content="{{ site.social }}" />{% endif %}
+		
+		<!-- Rich Pin data -->
+		<meta name="pinterest-rich-pin" content="false" />
+
+		<link rel="stylesheet" href="{{ assetsDomain }}/stylesheets/{{ site.url.production | split: '//' | last | replace: '.', '-dot-' }}.css" />
+		<link rel="manifest" href="{{ pageDomain }}/manifest.json" />
+		
+		<meta name="geo.region" content="DRC" />
+		<meta name="geo.placename" content="Kinshasa" />
+		
+		<link rel="canonical" href="{{ pageDomain }}" />
+		<link rel="shortlink" href="{{ pageDomain }}" />{% if site.production == "beta" %}
+		<link name="robots" content="nofollow, noindex, noimageindex, noarchive, nocache, nosnippet" />
+		<meta name="google" content="nositelinkssearchbox" />
+		<meta name="google" content="notranslate" />
+		<meta name="format-detection" content="telephone=no" />{% endif %}
+	</head>
+
+	<body>
+	<div id="particles-js"></div>
+		{{ content }}
+	<script src="{{ assetsDomain }}/scripts/{{ site.url.production | split: '//' | last | replace: '.', '-dot-' }}.js"></script>
+	</body>
+</html>
