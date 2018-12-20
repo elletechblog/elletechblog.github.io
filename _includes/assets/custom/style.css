@@ -61,7 +61,7 @@ body, html { background-color: #fff; }
 .article-content-p,
 .article-content-title { color: #fff; }
 
-.u-img-placeholder { background-color: #eee; }
+.u-img-placeholder { background-color: #eee !important; }
 /*** END COLORS ***/
 
 /*** FONTS ***/
@@ -110,6 +110,9 @@ body { font-family: Georgia, serif; }
 
 .f-fOne,
 .u-word-special-accent { font-weight: bold; }
+.u-word-special,
+i {// font-style: italic; }
+.u-word-special-accent { font-style: initial; }
 
 .f-fOne,
 .u-word-special-accent { text-transform: uppercase; }
@@ -125,6 +128,11 @@ body { font-family: Georgia, serif; }
 .u-block-title { background: url("{{ assetsDomain }}/images/matrix.gif") center center no-repeat; }
 .m-gallery-placeholder { background: url("{{ assetsDomain }}/images/world-map-old.jpg") center center no-repeat #d7d7d7; }
 
+.img-cover-image { background: url("{{ assetsDomain }}/images/placeholder-image-of-christelle-malala-for-{{ site.url.production | split: '//' | last | replace: '.', '-dot-' | prepend: 'www-dot-' }}.jpg") center center no-repeat; }
+.img-portrait-photo { background: url("{{ assetsDomain }}/images/placeholder-image-of-christelle-malala-for-{{ site.url.production | split: '//' | last | replace: '.', '-dot-' | prepend: 'www-dot-' }}.jpg") center center no-repeat; }
+.img-facebook-image {// background: url("{{ assetsDomain }}/images/placeholder-image-of-christelle-malala-for-{{ site.url.production | split: '//' | last | replace: '.', '-dot-' | prepend: 'www-dot-' }}.jpg") center center no-repeat; }
+.img-avi-photo { background: url("{{ assetsDomain }}/images/placeholder-image-of-christelle-malala-for-{{ site.url.production | split: '//' | last | replace: '.', '-dot-' | prepend: 'www-dot-' }}.jpg") center center no-repeat; }
+
 .d-matrix-code { opacity: 30; opacity: .3; }
 
 .radiobtn-contact-content-nav-p:checked ~ .u-word-special .u-word-special-accent,
@@ -134,7 +142,11 @@ body { font-family: Georgia, serif; }
 .d-matrix,
 .d-matrix-code,
 .m-gallery-placeholder,
-.u-block-title-wrap { background-size: cover !important; }
+.u-block-title-wrap,
+.img-cover-photo,
+.img-portrait-photo,
+.img-facebook-photo,
+.img-avi-photo { background-size: cover !important; }
 .u-block-title {
 	background-size: 200% auto !important;
 	
@@ -228,6 +240,10 @@ body { font-family: Georgia, serif; }
 .l-word-special-triple-top:after { bottom: -1.15em; }
 
 /** [layouts] **/
+.l-midWrap {
+	max-width: {{ designMidWrap }}px;
+	margin: 0 auto;
+}
 
 /** [mixins] **/
 .m-gallery-list {
@@ -612,7 +628,7 @@ body { font-family: Georgia, serif; }
 }
 .radiobtn-contact-content-nav-p { display: none; }
 
-.footer {
+.footer p {
 	width: 50%;
 	position: relative; left: 50%;
 	padding: 2em;
@@ -625,30 +641,15 @@ body { font-family: Georgia, serif; }
 	display: inline;
 }
 
-body {
-	max-width: 1400px;
-	margin: 0 auto;
+#js-u-shoutOut-particles-tech {
+//	background-color: red;
 }
 /*** END OVERRIDE ***/
 
 /*** TO DELETE ***/
-
-    .article-content::-webkit-scrollbar {
-        width: 15px;
-        height: 15px;
-    }
-    .article-content::-webkit-scrollbar-button:start:decrement,
-    .article-content::-webkit-scrollbar-button:end:increment  {
-//        display: block;
-        background-color: #166616;
-//        border: 1px solid #363636;
-    }
-    .article-content::-webkit-scrollbar-track-piece  {
-        background-color: #363636;
-//        border: 1px solid #363636;
-    }
-    .article-content::-webkit-scrollbar-thumb {
-        background-color: #166d16;
-//        border: 1px solid #363636;
-    }
+.article-content::-webkit-scrollbar { width: 15px; height: 15px; }
+.article-content::-webkit-scrollbar-button:start:decrement,
+.article-content::-webkit-scrollbar-button:end:increment  { background-color: #166616; }
+.article-content::-webkit-scrollbar-track-piece  { background-color: #363636; }
+.article-content::-webkit-scrollbar-thumb { background-color: #166d16; }
 /*** END TO DELETE ***/

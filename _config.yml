@@ -1,20 +1,34 @@
 # Site settings
 about:
-  elleTech:
-    name: "ElleTech"
-    description: "Le blog de Christelle Malala"
-    url: ""
+  ETb:
+    name: "ELLETECH blog"
+    description: "Christelle Malala parle nouvelles-technologies"
+    url: "https://elletechblog.github.io"
+    lang: "fr"
+    handle: "elletechblog"
   vexxia:
     name: "Vexxia"
     description: "A web development and marketing agency."
     url: ""
+    lang: "en"
 
 url:
   assets: "https://elletechblog.github.io/assets"
   development: "http://localhost:4000"
   beta: "https://ellemalala.github.io/elletechblog-beta"
   production: "https://elletechblog.github.io"
-
+  
+social:
+  twitter:
+    handle: "ellemalala"
+    url: "https://twitter.com/ellemalala"
+  instagram:
+    handle: "ellemalala"
+    url: "https://instagram.com/ellemalala"
+  github:
+    handle: "ellemalala"
+    url: "https://github.com/ellemalala"
+  
 favicons:
   apple-touch-icon: [180, 167, 152, 144, 120, 76, 72, 60, 57]
   apple-touch-icon-precomposed: [152, 144, 120, 72, 57, 32]

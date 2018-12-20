@@ -1,10 +1,10 @@
 ---
 layout: main
 ---
-{% include config/setup %}
-<header class="header">
+{% include config/setup %}{% include config/data %}
+<header class="header l-midWrap">
 	<nav class="header-nav">
-		<a class="header-nav-logo" href="{{ pageDomain }}" title="{% if page.url == '/' %}Vous êtes déjà sur la page d'acceuil. Cliquez pour actualiser.{% else %}Cliquez içi pour aller à la page d'acceuil{% endif %}"><img class="u-img-placeholder" src="{{ assetsDomain }}/images/placeholder-4x1.png" /></a>
+		<a class="header-nav-logo" href="{{ pageDomain }}" title="{% if page.url == '/' %}Vous êtes déjà sur la page d'acceuil. Cliquez pour actualiser.{% else %}Cliquez içi pour aller à la page d'acceuil{% endif %}"><img class="" src="{{ assetsDomain }}/images/{{ siteHandle }}-logo-name_colors.png" alt="" title="" /></a>
 				
 		<span class="header-nav-menu-button u-button"></span>
 		<span class="header-nav-search-button u-button"></span>
@@ -12,7 +12,7 @@ layout: main
 		
 	<section class="header-main">
 		<div class="header-main-note m-note">
-			<p class="m-note-p"><span class="f-fThree f-cGreen">Mbote</span>! Welcome to my blog.</p>
+			<p class="m-note-p"><span class="f-fThree f-cGreen">Mbote</span>! Bienvenu(e) sur mon blog.</p>
 			
 			<aside class="header-matrix d-matrix">
 				<ul class="m-gallery-list d-matrix-content">{% for i in (1..3) %}
@@ -23,32 +23,38 @@ layout: main
 				<div class="d-matrix-code l-matrix-code-front"></div>
 			</aside>
 			
-			<p class="m-note-p">Computers surround us in our daily lives, but the most powerful ideas of computing go beyond the sleek silver containers and glowing boxes. What are these ideas? And how do we prepare our kids for a world where more and more of the problems around us look like computers?</p>
+			<p class="m-note-p">Les ordinateurs nous entourrent, mais les idées les plus puissantes d'Informatique vont bien au dela de ces boîtes métalliques. Quels sont ces idées? Et comment préparer nos enfants à un monde où nos problèmes concernent de plus en plus des machines?</p>
 		</div><div class="header-main-banner">
-			<img class="u-img-placeholder" src="{{ assetsDomain }}/images/placeholder-4x3.png" />
+			<img class="u-img-placeholder img-cover-image" src="{{ assetsDomain }}/images/placeholder-4x3.png" />
 			
 			<h1 class="header-main-banner-title f-sH1">
 				<span class="header-main-banner-title-word header-main-banner-title-word-1 u-word-special l-word-special-triple">Christ<span class="u-word-special-accent l-word-special-triple-top">elle</span></span>
-				<span class="header-main-banner-title-word header-main-banner-title-word-2 u-word-special">speaks</span>
-				<span class="header-main-banner-title-word header-main-banner-title-word-3 u-word-special">about new</span>
+				<span class="header-main-banner-title-word header-main-banner-title-word-2 u-word-special">parle</span>
+				<span class="header-main-banner-title-word header-main-banner-title-word-3 u-word-special">nouvelles</span>
 				<span class="header-main-banner-title-word header-main-banner-title-word-4 u-word-special l-word-special-triple"><span class="u-word-special-accent l-word-special-triple-bottom">tech</span>nologies</span>
 			</h1>
 		</div>
 	</section>
 </header>
 
-<section>
+<section class="l-midWrap">
 	<header class="articles-header">
-		<h2 class="u-block-title-wrap"><span class="u-block-title u-fillText f-fOne f-sH1">Articles</span></h2>
+		<h2 class="u-block-title-wrap"><span class="u-block-title u-fillText f-fOne f-sH1">Notes</span></h2>
 		
 		{% include components/categories.html section="articles" %}
 	</header><div class="articles-list-wrap"><ul class="articles-list">
 		{% for i in (1..4) %}<li class="articles-list-item">
 			<article class="article">
-				<div class="article-content">
+<!--				<div class="article-content">
 					<a class="article-content-title u-word-bar" href="/link-to-article/">Some Business Article Title</a>
 					<hr class="article-content-hr" />
 					<p class="article-content-p">Lorem ipsum dolor sit amet, consetetur sadipscing elitr,  sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est.</p>
+				</div>-->
+				
+				<div class="article-content">
+					<a class="article-content-title u-word-bar" href="/link-to-article/">[no article yet]</a>
+					<hr class="article-content-hr" />
+					<p class="article-content-p">[no article yet]</p>
 				</div>
 			
 				<img class="u-img-placeholder" src="{{ assetsDomain }}/images/placeholder-4x4.png" />
@@ -57,27 +63,34 @@ layout: main
 	</ul></div>
 </section>
 
-<section class="about">
+<!--
+<p class="toDelete"><span class="toDelete1 f-fOne">ELLETECH</span><span class="toDelete2 f-fTwo">blog</span></p>
+
+<p class="toDelete"><span class="toDelete1 f-fOne">ET</span><span class="toDelete2 f-fTwo">b</span></p>
+-->
+
+<section class="about l-midWrap">
 	<header class="about-header">
 		<div class="u-shoutOut">
 			<h2 class="u-shoutOut-word">Elle</h2>
 			<div id="js-u-shoutOut-particles-elle" class="u-shoutOut-particles"></div>
 		</div>
-		<figure class="u-img-wrap"><img class="u-img-placeholder" src="{{ assetsDomain }}/images/placeholder-4x4.png" /></figure>
+		<figure class="u-img-wrap"><img class="u-img-placeholder img-portrait-photo" src="{{ assetsDomain }}/images/placeholder-4x4.png" /></figure>
 		
 		<blockquote class="m-hashWord-quote">
 			<q class="m-hashWord-quote-q f-fThree f-sH2">At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est.</q>
 			<cite class="m-hashWord-quote-cite">Christelle Malala</cite>
 		</blockquote>
 	</header><div class="about-note m-note">
-		<p class="m-note-p">Lorem ipsum dolor sit amet, consetetur sadipscing elitr,  sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est.</p>
+		<p class="m-note-p">C'est içi que je suis sensée faire des déclarations [bold] sur comment je réinvente le [rule book] en ultilisant les nouvelles téchnologies dans une quête éffrainée pour l'éxcellence digitale. De bien jolis mots. Mais c'est ce que tout le monde dit, n'est-ce pas?</p>
+		<p class="m-note-p">Tout simplement, j'aide les entreprises à naviguer le nouveau monde.</p>
 		<p class="m-note-p">Lorem ipsum dolor sit amet, consetetur sadipscing elitr,  sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est.</p>
 		
 		<p class="about-note-signature">signé <span class="about-note-signature-name f-fThree f-cGreen">Christelle Malala Mbala</span></p>
 	</div>
 </section>
 
-<section>
+<section class="l-midWrap">
 	<section class="social">
 		<div class="social-matrix d-matrix">
 			<ul class="m-gallery-list d-matrix-content">{% for i in (1..3) %}
@@ -86,13 +99,11 @@ layout: main
 				
 			<div class="d-matrix-code l-matrix-code-back"></div>
 			<div class="d-matrix-code l-matrix-code-front"></div>
-		</div><div class="social-links"><ul class="social-links-list">
-			<li class="social-links-list-item"><div class="social-links-link-wrap u-word-bar-wrap"><a class="social-links-link u-word-bar" rel="noindex, nofollow" href="https://twitter.com/ellemalala">Twitter</a></div></li>
-			<li class="social-links-list-item"><div class="social-links-link-wrap"><a class="social-links-link u-word-bar" rel="noindex, nofollow" href="https://instagram.com/ellemalala">Instagram</a></div></li>
-			<li class="social-links-list-item"><div class="social-links-link-wrap"><a class="social-links-link u-word-bar" rel="noindex, nofollow" href="https://facebook.com/ellemalala">Facebook</a></div></li>
+		</div><div class="social-links"><ul class="social-links-list">{% for social in site.social %}
+			<li class="social-links-list-item"><div class="social-links-link-wrap u-word-bar-wrap"><a class="social-links-link u-word-bar" rel="noindex, nofollow" href="{% for link in social %}{{ link.url }}{% endfor %}">{{ social[0] | capitalize }}</a></div></li>{% endfor %}
 		</ul></div>
 	</section><div class="social-video">
-		<img class="u-img-placeholder" src="{{ assetsDomain }}/images/placeholder-4x2.png" />
+		<a href="https://facebook.com/elletechblog" rel="noindex,nofollow"><img class="u-img-placeholder img-facebook-image" src="{{ assetsDomain }}/images/placeholder-4x2.png" /></a>
 			
 		<h3 class="social-video-hashtag f-sH1">
 			<span class="u-word-special l-word-special-triple"><span class="u-word-special-accent l-word-special-triple-middle">@</span>ElleMalala</span>
@@ -100,13 +111,13 @@ layout: main
 	</div>
 </section>
 	
-<section class="contact">
+<section class="contact l-midWrap">
 	<div class="contact-word">
 		<div class="u-shoutOut">
 			<h2 class="u-shoutOut-word">T<br/>e<br/>c<br/>h</h2>
 			<hr id="js-u-shoutOut-particles-tech" class="u-shoutOut-particles" />
 		</div>
-		<figure class="u-img-wrap"><img class="u-img-placeholder" src="{{ assetsDomain }}/images/placeholder-4x4.png" /></figure>
+		<figure class="u-img-wrap"><img class="u-img-placeholder img-avi-photo" src="{{ assetsDomain }}/images/placeholder-4x4.png" /></figure>
 			
 		<blockquote class="contact-word-quote m-hashWord-quote">
 			<q class="m-hashWord-quote-q f-fThree f-sH2">At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est.</q>
@@ -115,7 +126,7 @@ layout: main
 	</div>
 		
 	<div class="contact-content">
-		<h2 class="u-block-title-wrap"><span class="u-block-title u-fillText f-fOne f-sH2">contact</span></h2>
+		<h2 class="u-block-title-wrap"><span class="u-block-title u-fillText f-fOne f-sH2">Contact</span></h2>
 		{% include components/categories.html section="contact" %}
 		
 		<form class="contact-content-form">
@@ -123,15 +134,15 @@ layout: main
 				<input id="contact-name" class="contact-content-form-input u-input" type="text" placeholder="John Doe" required />
 				
 				<label for="contact-email" class="contact-content-form-label f-fThree">Email (optionel) :</label>
-				<input id="contact-email" class="contact-content-form-input u-input" type="email" placeholder="johndoe@exemple.com" required />
+				<input id="contact-email" class="contact-content-form-input u-input" type="email" placeholder="johndoe@example.com" required />
 					
 				<label for="contact-name" class="contact-content-form-label f-fThree">Message :</label>
 				<textarea id="contact-message" class="contact-content-form-input u-input" placeholder="Un petit coucou au passage?"></textarea>
 					
-				<input id="contact-form-button" class="contact-content-form-submit" type="submit" value="Add Me" />
-				<label for="contact-form-button" class="contact-content-form-submit-label u-word-bar u-submit">Button</label>
+				<input id="contact-form-button" class="contact-content-form-submit" type="submit" value="Envoyer" />
+				<label for="contact-form-button" class="contact-content-form-submit-label u-word-bar u-submit">Envoyer</label>
 		</form>
 	</div>
 </section>
 
-<footer class="footer"><p>&copy Copyrights {{ site.time | date: "%Y" }} {{ site.about.elleTech.name | upcase }}. All rights reserved. Site designed, developed and maintained by {{ site.about.vexxia.name | capitalize }}.</p></footer>
+<footer class="footer l-midWrap"><p>&copy Copyrights {{ site.time | date: "%Y" }} {{ site.about.ETb.name | replace: " ", "<i>" | append: "</i>" }}. Tous droits réservés. Site web par <a href="{{ site.about.vexxia.url }}" rel="noindex, nofollow">{{ site.about.vexxia.name | capitalize }}</a>.</p></footer>

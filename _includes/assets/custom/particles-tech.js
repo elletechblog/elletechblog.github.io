@@ -1,3 +1,4 @@
+{% include config/setup %}{% include config/data %}
 particlesJS("js-u-shoutOut-particles-tech", {
     "particles": {
         "number": {
@@ -11,7 +12,7 @@ particlesJS("js-u-shoutOut-particles-tech", {
             "value": "#ffffff"
         },
         "shape": {
-            "type": "image",
+            "type": ["image", "circle", "triangle", "polygon"],
             "stroke": {
                 "width": 0,
                 "color": "#000000"
@@ -20,7 +21,7 @@ particlesJS("js-u-shoutOut-particles-tech", {
                 "nb_sides": 4
             },
             "image": {
-                "src": "assets/images/vexxia-logo-icon_white-white.png",
+                "src": "assets/images/{{ siteHandle }}-logo-icon_white.png",
                 "width": 100,
                 "height": 100
             }
@@ -115,7 +116,7 @@ stats.domElement.style.position = 'absolute';
 stats.domElement.style.left = '0px';
 stats.domElement.style.top = '0px';
 document.body.appendChild(stats.domElement);
-count_particles = document.querySelector('.js-count-particles');
+count_particles = document.querySelector('.js-count-particles-tech');
 update = function() {
     stats.begin();
     stats.end();

@@ -1,3 +1,4 @@
+{% include config/setup %}{% include config/data %}
 particlesJS("js-u-shoutOut-particles-elle", {
     "particles": {
         "number": {
@@ -20,7 +21,7 @@ particlesJS("js-u-shoutOut-particles-elle", {
                 "nb_sides": 4
             },
             "image": {
-                "src": "assets/images/vexxia-logo-icon_white-white.png",
+                "src": "assets/images/{{ siteHandle }}-logo-icon_white.png",
                 "width": 100,
                 "height": 100
             }
