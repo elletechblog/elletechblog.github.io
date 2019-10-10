@@ -1,4 +1,67 @@
 ---
 layout: default
 ---
-{{ content }}
+{% include config/setup %}{% include config/data %}
+<header class="header">
+	<div class="header-content">
+		<nav class="header-menu">
+			<input type="checkbox" id="menu-button" />
+			<label class="header-menu-button m-button u-link f-fThree" for="menu-button">About</label>
+		
+			<div class="header-menu-content">
+				<p class="header-menu-p">Howdie, world! My name is Christelle Malala, a developer from Central Africa. I made this minimalist site to quickstart a habit of writing. Welcome!</p>
+			</div>
+		</nav>
+		
+		<span class="header-logo-bg img-matrix"></span>
+		<a href="{{ pageDomain }}"><img src="{{ assetsDomain }}/images/elletechblog-logo-name_black.png" class="header-logo" alt="ELLETECHblog Logo" title="ELLETECHblog Logo" /></a>
+		
+		<div class="header-social"><ul class="header-social-list">
+			<li class="header-social-list-item is-child__1">
+				<span class="header-social-link">
+					<svg class="header-social-svg" viewBox="0 0 20 14" xmlns="http://www.w3.org/2000/svg"><title>Twitter Icon</title><path d="M3 11.631c.115.02.233.032.353.036.12.005.242.008.367.008.711 0 1.386-.116 2.024-.346a6.278 6.278 0 0 0 1.736-.95 2.895 2.895 0 0 1-1.765-.606 2.988 2.988 0 0 1-1.058-1.498 2.894 2.894 0 0 0 .972.029c.13-.02.262-.043.396-.072A3.022 3.022 0 0 1 4.29 7.187a2.893 2.893 0 0 1-.698-1.923v-.043c.201.115.417.204.648.266.23.063.47.099.72.108a3.015 3.015 0 0 1-.972-1.066 2.95 2.95 0 0 1-.368-1.455c0-.268.036-.533.108-.792.073-.26.171-.5.296-.72.374.451.792.864 1.253 1.239a8.64 8.64 0 0 0 3.162 1.628c.59.163 1.198.259 1.823.288a6.045 6.045 0 0 1-.05-.332 2.95 2.95 0 0 1 .216-1.534 3.047 3.047 0 0 1 1.605-1.613A2.933 2.933 0 0 1 13.214 1c.432 0 .84.086 1.224.26.384.172.71.407.98.705.346-.067.68-.163 1.001-.288a6.61 6.61 0 0 0 .93-.447 3.102 3.102 0 0 1-1.34 1.671c.307-.038.607-.098.9-.18.293-.081.574-.18.843-.295-.202.298-.43.579-.685.843-.254.264-.53.507-.828.727 0 .058.002.12.007.188.005.067.007.134.007.201 0 1-.187 2.01-.562 3.033a8.643 8.643 0 0 1-1.656 2.773c-.73.826-1.63 1.5-2.701 2.024-1.071.523-2.303.785-3.695.785-.423 0-.84-.031-1.254-.094a8.924 8.924 0 0 1-1.203-.266 7.841 7.841 0 0 1-1.13-.432A10.092 10.092 0 0 1 3 11.63z" stroke-width="1.1" fill-rule="evenodd"></path></svg>
+					<span class="header-social-text">Twitter</span>
+				</span>
+				<span class="header-social-tooltip">Sorry. The blog's Twitter account is not available yet. You can follow my personal account (<a href="https://twitter.com/ellemalala" class="header-social-tooltip-link u-link">@ElleMalala</a>) instead.</span>
+			</li><li class="header-social-list-item is-child__2">
+				<a class="header-social-link">
+					<span class="header-social-text">Instagram</span>
+					<svg class="header-social-svg" viewBox="0 0 15 15" xmlns="http://www.w3.org/2000/svg"><title>Instagram Icon</title><g fill-rule="evenodd"><path d="M7.429 1.34c1.982 0 2.217.008 3 .044.724.033 1.118.154 1.38.255.346.135.593.296.853.556.26.26.421.507.556.854.101.261.222.655.255 1.379.036.783.044 1.018.044 3 0 1.983-.008 2.218-.044 3.001-.033.724-.154 1.118-.255 1.38a2.3 2.3 0 0 1-.556.853 2.3 2.3 0 0 1-.854.556c-.261.101-.655.222-1.379.255-.783.036-1.017.044-3 .044s-2.218-.008-3.001-.044c-.724-.033-1.118-.154-1.38-.255a2.3 2.3 0 0 1-.853-.556 2.3 2.3 0 0 1-.556-.854c-.101-.261-.222-.655-.255-1.379-.036-.783-.044-1.018-.044-3 0-1.983.008-2.218.044-3.001.033-.724.154-1.118.255-1.38a2.3 2.3 0 0 1 .556-.853c.26-.26.507-.42.854-.556.261-.101.655-.222 1.379-.255.783-.036 1.018-.044 3-.044m0-1.338c-2.016 0-2.27.009-3.061.045-.79.036-1.33.162-1.803.345a3.64 3.64 0 0 0-1.315.857 3.64 3.64 0 0 0-.857 1.315C.21 3.036.083 3.576.047 4.367.011 5.159.002 5.412.002 7.429c0 2.016.009 2.27.045 3.061.036.79.162 1.33.345 1.803.19.488.444.903.857 1.315a3.64 3.64 0 0 0 1.315.857c.472.184 1.012.309 1.803.345.792.036 1.045.045 3.062.045 2.016 0 2.27-.009 3.061-.045.79-.036 1.33-.161 1.803-.345a3.64 3.64 0 0 0 1.315-.857 3.64 3.64 0 0 0 .857-1.315c.184-.472.309-1.012.345-1.803.036-.792.045-1.045.045-3.061 0-2.017-.009-2.27-.045-3.062-.036-.79-.161-1.33-.345-1.803a3.64 3.64 0 0 0-.857-1.315 3.64 3.64 0 0 0-1.315-.857C11.821.21 11.281.083 10.49.047 9.698.011 9.445.002 7.43.002"></path><path d="M7.429 3.615a3.813 3.813 0 1 0 0 7.627 3.813 3.813 0 0 0 0-7.627zm0 6.289a2.475 2.475 0 1 1 0-4.95 2.475 2.475 0 0 1 0 4.95zM12.284 3.464a.891.891 0 1 1-1.782 0 .891.891 0 0 1 1.782 0"></path></g>
+					</svg>
+				</a>
+			</li>
+		</ul></div>
+	</div>
+	
+	<div class="header-banner">
+		<marquee class="header-banner-marquee" behavior="alternate">
+			<h1 class="header-banner-title f-sH1">
+				<span class="header-banner-title-word header-banner-title-word-1 u-word-special l-word-special-triple">Christ<span class="u-word-special-accent l-word-special-triple-top">elle</span></span>
+				<span class="header-banner-title-word header-banner-title-word-2 u-word-special">speaks</span>
+				<span class="header-banner-title-word header-banner-title-word-3 u-word-special">on new</span>
+				<span class="header-banner-title-word header-banner-title-word-4 u-word-special l-word-special-triple"><span class="u-word-special-accent l-word-special-triple-bottom">tech</span>nologies</span>
+			</h1>
+		</marquee>
+	</div>
+</header>
+
+<section class="body">
+	{{ content }}
+
+	<footer class="footer">
+		<form class="newsletter" method="POST" action="https://formspree.io/elletechblog@gmail.com">
+			<p class="f-fThree">Want to get sneak peaks into my life of tech? Upcoming projects, books to read, and events? Join my newsletter. Send me your email now!</p>
+			
+			<div class="newsletter-box">
+				<label class="newsletter-box-label f-fOne">Name:</label>
+				<input type="text" name="name" class="newsletter-box-input u-input" placeholder="Jane Doe" />
+			</div><div class="newsletter-box">
+				<label class="newsletter-box-label f-fOne">Email:</label>
+				<input type="email" name="_replyto" class="newsletter-box-input u-input" placeholder="janedoe@example.com" />
+			</div>
+			
+			<input type="submit" class="newsletter-button m-button f-fThree" value="Add me up" />
+		</form>
+		<p class="footer-text">&copy Copyrights {{ site.time | date: "%Y" }} ELLETECHblog. All rights reserved.</p>
+	</footer>
+</section>

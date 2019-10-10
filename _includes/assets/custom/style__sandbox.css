@@ -1,0 +1,7 @@
+{% include config/setup %}{% include config/data %}
+
+
+svg {
+	height: 540px !important; width: 540px !important;
+//	border: 1px solid red;
+}

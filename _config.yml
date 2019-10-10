@@ -4,13 +4,8 @@ about:
     name: "ELLETECH blog"
     description: "Christelle Malala parle nouvelles-technologies"
     url: "https://elletechblog.github.io"
-    lang: "fr"
-    handle: "elletechblog"
-  vexxia:
-    name: "Vexxia"
-    description: "A web development and marketing agency."
-    url: ""
     lang: "en"
+    handle: "elletechblog"
 
 url:
   assets: "https://elletechblog.github.io/assets"
@@ -37,6 +32,39 @@ favicons:
   msapplication-square: [310, 150, 70]
 
 # Build settings
+include: ["_sandbox"]
+
+collections:
+    articles:
+        output: true
+        permalink: articles/:path/
+    drafts:
+        output: true
+        permalink: drafts/:path/
+    pages:
+        output: true
+    posts:
+        output: true
+        permalink: :path/
+
+permalink: :title/
+
+defaults:
+    - scope:
+        path: ""
+        type: "articles"
+      values:
+        layout: "page-article"
+    - scope:
+        path: ""
+        type: "drafts"
+      values:
+        layout: "page-draft"
+    - scope:
+        path: ""
+      values:
+        layout: "main"
+
 encoding: utf-8
 markdown: kramdown
 generator: "Jekyll 3.1.6"

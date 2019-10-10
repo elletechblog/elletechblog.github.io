@@ -2,7 +2,7 @@
 ---
 {% include config/setup %}{% include config/data %}
 <!DOCTYPE html>
-<html lang="en" class="nope-js">
+<html lang="{{ siteLang }}" class="nope-js">
 	<head>
 		<meta charset="utf-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -10,36 +10,31 @@
 		
 		<meta name="HandheldFriendly" content="true" />
 		<meta name="apple-mobile-web-app-capable" content="yes" />
-		<meta name="apple-mobile-web-app-title" content="ELLETECHblog" />
+		<meta name="apple-mobile-web-app-title" content="{{ siteName }}" />
 		<meta name="apple-mobile-touch-fullscreen" content="yes" />
 		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 
-		<meta name="description" content="{{ page.sub-title }}" />
-		<title>{{ page.title }} | {{ page.sub-title }}</title>
+		<meta name="description" content="{{ siteDescription }}" />
+		<title>{{ pageTitle }}</title>
 		
 		<link rel="index" content="{{ pageDomain }}" />
 		<link rel="webmention" content="" />
 		
 		<link rel="icon" href="{{ pageDomain }}/favicon.png" />
-
-		<!--
+		
 		{% for faviconSize in site.favicons.icon %}
 		<link rel="icon" type="image/png" sizes="{{ faviconSize }}x{{ faviconSize }}" href="{{ pageDomain }}/assets/images/favicons/{{ siteHandle }}-logo-icon-{{ faviconSize }}.png" />{% endfor %}
 		{% for faviconSize in site.favicons.apple-touch-icon %}
 		<link rel="apple-touch-icon" sizes="{{ faviconSize }}x{{ faviconSize }}" href="{{ pageDomain }}/assets/images/favicons/{{ siteHandle }}-logo-icon-{{ faviconSize }}.png" />{% endfor %}
 		{% for faviconSize in site.favicons.apple-touch-icon-precomposed %}
 		<link rel="apple-touch-icon-precomposed" sizes="{{ faviconSize }}x{{ faviconSize }}" href="{{ pageDomain }}/assets/images/favicons/{{ siteHandle }}-logo-icon-{{ faviconSize }}.png" />{% endfor %}
-		-->
 		
 		<meta name="msapplication-TileColor" content="#ffffff" />
-		<meta name="msapplication-TileImage" content="{{ pageDomain }}/favicon.png" />
-		<!--
 		<meta name="msapplication-TileImage" content="{{ pageDomain }}/assets/images/favicons/{{ siteHandle }}-logo-icon-144.png" />{% for faviconSize in site.favicons.msapplication-square %}
 		<meta name="msapplication-square{{ faviconSize }}x{{ faviconSize }}.png" content="{{ pageDomain }}/assets/images/favicons/{{ siteHandle }}-logo-icon-{{ faviconSize }}.png" />{% endfor %}<meta name="msapplication-square310x150.png" content="{{ pageDomain }}/assets/images/{{ siteHandle }}-logo-name-black-310x150.png" />
-		-->
 		
 		<meta rel="author" href="{{ pageDomain }}/humans.txt" type="text/plain" />
-		<meta name="copyright" content="ELLETECHblog" />
+		<meta name="copyright" content="{{ siteName }}" />
 		<meta name="generator" content="{{ site.generator }}" />
 		
 		<!--
@@ -51,45 +46,41 @@
 		-->
 		
 		<!-- Schema.org data -->
-		<!--
 		<meta content="{{ pageTitle }}" />
 		<meta content="{{ pageDescription }}" />
 		<meta content="true" />
 		<meta content="{{ pageDomain }}/assets/images/{{ siteHandle }}-logo-name_colors.png" />
-		-->
 		
 		<!-- Twitter Card data -->
 		<meta name="twitter:card" content="summary" />
-		<meta name="twitter:site" content="{{ pageDomain }}" />
-		<meta name="twitter:creator" content="ElleMalala" />
-		<meta name="twitter:title" content="{{ page.title }}" />
-		<meta name="twitter:description" content="{{ page.sub-title }}" />
-		<meta name="twitter:image" content="{{ assetsDomain }}/images/elletechblog-logo-name_black.png" />
-		<meta name="twitter:image:alt" content="Logo of ELLETECHblog ({{ pageDomain }})" />
+		<meta name="twitter:site" content="@{{ site.social.twitter.handle }}" />
+		<meta name="twitter:creator" content="{{ site.social.twitter.handle }}" />
+		<meta name="twitter:title" content="{{ pageTitle }}" />
+		<meta name="twitter:description" content="{{ pageDescription }}" />
+		<meta name="twitter:image" content="{{ pageDomain }}/assets/images/{{ siteHandle }}-logo-name_colors.png" />
+		<meta name="twitter:image:alt" content="Logo de {{ siteName }} ({{ site.url.production }}): {{ siteDescription }}" />
 		
 		<!-- Open Graph data -->
-		<meta property="og:locale" content="en" />
+		<meta property="og:locale" content="{{ siteLang }}" />
 		<meta property="og:type" content="website" />
-		<meta property="og:title" content="{{ page.title }}" />
-		<meta property="og:description" content="{{ page.sub-title }}" />
+		<meta property="og:title" content="{{ pageTitle }}" />
+		<meta property="og:description" content="{{ pageDescription }}" />
 		<meta property="og:url" content="{{ pageDomain }}" />
-		<meta property="og:site_name" content="ELLETECHblog" />
-		<meta property="og:image" content="{{ assetsDomain }}/images/elletechblog-logo-name_black.png"/>
-		<!--{% if site.facebook %}
+		<meta property="og:site_name" content="{{ siteName }}" />
+		<meta property="og:image" content="{{ assetsDomain }}/images/{{ siteHandle }}-logo-name_colors.png"/>{% if site.facebook %}
 		<meta property="fb:admins" content="{{ siteHandle }}" />{% endif %}
-		-->
 		
 		<!-- Rich Pin data -->
 		<meta name="pinterest-rich-pin" content="false" />
 
-		<link rel="stylesheet" href="{{ assetsDomain }}/stylesheets/{{ site.url.production | split: '//' | last | replace: '.', '-dot-' }}.css" />
+		<link rel="stylesheet" href="{{ assetsDomain }}/stylesheets/{{ site.url.production | split: '//' | last | replace: '.', '-dot-' }}__sandbox.css" />
 		<link rel="manifest" href="{{ pageDomain }}/manifest.json" />
 		
 		<meta name="geo.region" content="DRC" />
 		<meta name="geo.placename" content="Kinshasa" />
 		
-		<link rel="canonical" href="{{ page.url }}" />
-		<link rel="shortlink" href="{{ page.url }}" />{% if pageDomain != site.url.production %}
+		<link rel="canonical" href="{{ pageDomain }}" />
+		<link rel="shortlink" href="{{ pageDomain }}" />{% if pageDomain != site.url.production %}
 		<link name="robots" content="nofollow, noindex, noimageindex, noarchive, nocache, nosnippet" />
 		<meta name="google" content="nositelinkssearchbox" />
 		<meta name="google" content="notranslate" />
@@ -97,6 +88,8 @@
 	</head>
 
 	<body id="{{ page.layout }}">
-		{{ content }}	
+		{{ content }}
+		
+	<script src="{{ assetsDomain }}/scripts/{{ site.url.production | split: '//' | last | replace: '.', '-dot-' }}.js"></script>
 	</body>
 </html>

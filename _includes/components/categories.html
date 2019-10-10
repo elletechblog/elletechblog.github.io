@@ -1,7 +1,0 @@
-<nav class="l-{{ include.section }}_u-word-special-list-wrap u-word-special-list-wrap"><ul class="u-word-special-list">{% assign categoryCount = 0 %}{% for categories in site.data.categories %}{% capture categoryCount %}{{ categoryCount | plus: 1 }}{% endcapture %}{% for category in categories %}
-	<li class="u-word-special-list-item">
-		<input type="radio" id="radiobtn-{{ include.section }}-content-nav-p-{{ categoryCount }}" class="radiobtn-contact-content-nav-p" name="{{ include.section }}-buttons"{% if categoryCount == '1' %} checked{% endif %} />
-		<label for="radiobtn-{{ include.section }}-content-nav-p-{{ categoryCount }}" class="u-word-special u-link">{{ category[0] | replace: "[", "<span class='u-word-special-accent'>" | replace: "]", "</span>" }}</label>
-		<p class="contact-content-nav-p-{{ categoryCount }} contact-content-nav-p">{% for section in category[1] %}{{ section.[include.section] }}{% endfor %}</p>
-	</li>{% endfor %}{% endfor %}
-</ul></nav>

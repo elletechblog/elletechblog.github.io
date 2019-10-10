@@ -6,6 +6,9 @@ vexxia(document).ready(function() {
 	config_setup();
 		
 	/*** ACTIONS ***/
+	vexxia(".js-menu-button").click(function(){
+		vexxia(".js-menu").toggleClass("is-open");
+	});
 	/*** END ACTIONS ***/
 
 	/*** FUNCTIONS ***/

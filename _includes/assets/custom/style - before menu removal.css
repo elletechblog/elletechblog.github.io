@@ -1,0 +1,207 @@
+{% include config/setup %}{% include config/data %}
+/*** CANCEL ***/
+h1, h2, h3, h4, h5, h6,
+p, span,
+a, input, label { font-size: 1.1em; }
+
+p, p * { line-height: 1.5em; }
+
+body {
+//	font-size: 13px;
+}
+/*** END CANCEL ***/
+
+/*** INDEXES ***/
+/*** END INDEXES ***/
+
+/*** COLORS ***/ /* green: #166d16 | red: #c22 | grey: #d7d7d7 | black: #202020 */
+.body { background-color: #d7d7d7; }
+/*** END COLORS ***/
+
+/*** FONTS ***/
+@font-face {
+	font-family: "Hobo Std";
+		 
+	src: url("./fonts/Hobo-Std/HoboStd.eot"); /* IE9 Compat Modes */
+	src: local("Hobo Std"),
+		 url("{{ pageDomain }}/assets/fonts/Hobo-Std/HoboStd.eot?#iefix") format("embedded-opentype"),
+		 url("{{ pageDomain }}/assets/fonts/Hobo-Std/HoboStd.otf") format("opentype"),
+		 url("{{ pageDomain }}/assets/fonts/Hobo-Std/HoboStd.svg") format("svg"),
+		 url("{{ pageDomain }}/assets/fonts/Hobo-Std/HoboStd.ttf") format("truetype"),
+		 url("{{ pageDomain }}/assets/fonts/Hobo-Std/HoboStd.woff") format("woff"),
+		 url("{{ pageDomain }}/assets/fonts/Hobo-Std/HoboStd.woff2") format("woff2");
+	font-weight: normal;
+	font-style: normal;
+}
+
+
+body { font-family: Georgia, serif; }
+.f-fTwo { font-family: "Hobo Std", sans-serif; }
+.f-fOne { font-family: "New Times Roman", serif; }
+.f-fThree { font-family: Impact, sans-serif; }
+
+.f-fThree { letter-spacing: .1em; }
+
+.menu { text-align: right; }
+	
+.f-sH1 { font-size: 2em; }
+.f-sH2 { font-size: 1.8em; }
+
+.f-fOne { font-variant: small-caps; }
+
+.f-fOne { font-weight: bold; }
+
+.f-fOne { text-transform: uppercase; }
+/*** END FONTS ***/
+
+/*** MEDIA ***/
+.img-bg_logo-icon_white,
+.img-bg_logo-icon_colors:hover { background: url("{{ assetsDomain }}/images/{{ site.about.ETb.name | remove: ' ' | downcase }}-logo-icon_white.png") center center; }
+.img-bg_logo-icon_colors { background: url("{{ assetsDomain }}/images/{{ site.about.ETb.name | remove: ' ' | downcase }}-logo-icon_colors.png") center center #eee; }
+
+.img-cover-image { background: url("{{ assetsDomain }}/images/placeholder-image-of-christelle-malala-for-{{ site.url.production | split: '//' | last | replace: '.', '-dot-' | prepend: 'www-dot-' }}.jpg") center center no-repeat; }
+.img-portrait-photo { background: url("{{ assetsDomain }}/images/placeholder-image-of-christelle-malala-for-{{ site.url.production | split: '//' | last | replace: '.', '-dot-' | prepend: 'www-dot-' }}.jpg") center center no-repeat; }
+.img-facebook-image {// background: url("{{ assetsDomain }}/images/placeholder-image-of-christelle-malala-for-{{ site.url.production | split: '//' | last | replace: '.', '-dot-' | prepend: 'www-dot-' }}.jpg") center center no-repeat; }
+.img-avi-photo { background: url("{{ assetsDomain }}/images/placeholder-image-of-christelle-malala-for-{{ site.url.production | split: '//' | last | replace: '.', '-dot-' | prepend: 'www-dot-' }}.jpg") center center no-repeat; }
+
+.img-cover-photo,
+.img-portrait-photo,
+.img-facebook-photo,
+.img-avi-photo { background-size: cover !important; }
+/*** END MEDIA ***/
+
+/*** COMMONS ***/
+body, 
+.header { position: relative; }
+
+.header, .body { float: left; }
+body { overflow: auto; }
+
+{
+	display: inline-block;
+	vertical-align: top;
+}
+
+/** [decoration] **/
+
+/** [layouts] **/
+.l-midWrap {
+}
+
+/** [mixins] **/
+
+/** [utilities] **/
+.u-link {
+	display: inline-block;
+}
+/*** END COMMONS ***/
+
+/*** COMPONENTS ***/
+html, body, .header, .body {
+	min-height: 100%; height: 100%;
+}
+
+.header {
+	width: 60%;
+	
+	position: fixed; top: 0; left: 0;
+}
+.body {
+	width: 40%;
+	position: relative; left: 60%;
+}
+
+.menu {
+	position: absolute; top: 2em; right: 2em;
+}
+.menu-button {
+	display: inline-block;
+	width: 2em; height: 2em;
+
+	background-color: red;
+}
+.menu-content {
+	background-color: green;
+}
+.menu-content-list-item {
+	padding: .5em;
+}
+.menu-link {
+	padding: .5em;
+}
+/*** END COMPONENTS ***/
+
+/*** PAGES ***/
+/*** END PAGES ***/
+
+/*** ANIMATIONS ***/
+ { -webkit-animation: slider 10s infinite; }
+
+	@-webkit-keyframes slider {
+		0%, 20%, 35%{ background-image: url("{{ assetsDomain }}/images/gallery/1.jpg"); }
+		35%, 55%, 70%{ background-image: url("{{ assetsDomain }}/images/gallery/2.jpg"); }
+		70%, 80%, 95% {background-image: url("{{ assetsDomain }}/images/gallery/3.jpg"); }
+		100%{ background-image: url("{{ assetsDomain }}/images/gallery/1.jpg"); }
+	}
+/*** END ANIMATIONS ***/
+
+/*** INTERACTIVITY ***/
+.u-link,
+.u-submit { cursor: pointer; }
+ { cursor: initial; }
+ 
+.js-menu.is-closed .menu-content { display: none; }
+.js-menu.is-open .menu-content { display: block; }
+/*** END INTERACTIVITY ***/
+
+/*** DEPENDENCIES ***/
+/** [javascript] **/
+
+/** [php] **/
+
+/*** END DEPENDENCIES ***/
+
+/*** MEDIA QUERIES ***/
+/** [all] **/
+@media all and (min-width: 0) {}
+
+@media all and (max-width: 20rem) {}
+@media all and (min-width: 20rem) {}
+
+@media all and (max-width: 40rem) {
+	body { font-size: 13px; }
+}
+@media all and (min-width: 40rem) {
+	body { font-size: 16px; }
+}
+
+@media all and (min-width: 50rem) {}
+
+/** [screen] **/
+@media screen and (min-width: 0) {}
+
+@media screen and (min-width: 60rem) {}
+
+@media screen and (min-width: 80rem) {}
+
+@media screen and (min-width: 100rem) {}
+
+/** [handheld] **/
+@media handheld and (device-orientation: portrait) {}
+@media handheld and (device-orientation: landscape) {}
+
+/** [print] **/
+@media print {
+	.nope-js * {
+		display: none !important;
+		background-color: transparent !important;
+		background: none !important;
+	}
+}
+/*** END MEDIA QUERIES ***/
+
+/*** OVERRIDE ***/
+/*** END OVERRIDE ***/
+
+/*** TO DELETE ***/
+/*** END TO DELETE ***/

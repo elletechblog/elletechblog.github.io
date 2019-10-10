@@ -1,0 +1,25 @@
+---
+layout: main
+---
+{% include config/setup %}{% include config/data %}
+<div class="body-author">
+	<figure class="body-author-figure u-img-border">
+		<img src="{{ assetsDomain }}/images/placeholders/placeholder-4x4.png" class="body-author-figure-placeholder img-avi-photo" title="This is a portrait image of Christelle Malala" />
+		<span class="body-author-figure-veil"></span>
+	</figure><div class="body-author-details">
+		<span class="f-fThree">{{ page.where }} <br />--<br /> {{ page.when }}</span>
+	</div>
+</div>
+
+<section class="body-content">
+	<header class="body-content-banner">
+		<h2 class="body-content-banner-title f-fTwo f-sH1"><span class="body-content-banner-title-wrap">{{ page.sub-title }}</span></h2>
+		<img src="{{ assetsDomain }}/images/placeholders/placeholder-4x1.png" class="body-content-banner-img img-bg_logo-icon_white" />
+	</header>
+	
+	<article class="body-content-article-wrap"><div class="body-content-article">
+		{{ content }}
+	</div></article>
+	
+	<hr class="u-hr" />
+</section>
