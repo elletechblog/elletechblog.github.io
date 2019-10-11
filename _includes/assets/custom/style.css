@@ -335,7 +335,7 @@ p { padding: .5em; }
 }
 .header-logo {
 	vertical-align: middle;
-	position: relative; top: 20%;
+	position: relative; top: 20% !important;
 	padding: 2em 0;
 	text-align: center;
 	display: block; text-align: center; margin: 0 auto;
