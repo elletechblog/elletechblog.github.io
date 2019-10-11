@@ -67,6 +67,7 @@ body, html,
 .header-menu:before,
 .header-menu {// background-color: #fff; }
 .header-menu::before { background-color: #fff; }
+body, html,
 .body-content-banner-img { background-color: #fff !important; }
 .header-social-link:hover .header-social-svg,
 .header-social-link:active .header-social-svg,
