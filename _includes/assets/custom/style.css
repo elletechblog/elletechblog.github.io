@@ -58,6 +58,7 @@ input[type="checkbox"] { visibility: hidden; }
 .newsletter-button:hover,
 .newsletter-button:active,
 .newsletter-button:focus { color: #fff; }
+body, html,
 #page-article .body-author,
 #page-article .body-content-article-wrap,
 .body-content-banner,
@@ -336,6 +337,7 @@ p { padding: .5em; }
 	vertical-align: middle;
 	position: relative; top: 20%;
 	padding: 2em 0;
+	text-align: center;
 	display: block; text-align: center; margin: 0 auto;
 }
 .header-logo-word_ET,
