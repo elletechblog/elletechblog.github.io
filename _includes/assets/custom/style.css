@@ -166,7 +166,7 @@ i { font-style: italic; }
 .img-cover-image { background: url("{{ assetsDomain }}/images/placeholder-image-of-christelle-malala-for-{{ site.url.production | split: '//' | last | replace: '.', '-dot-' | prepend: 'www-dot-' }}.jpg") center center no-repeat; }
 .img-portrait-photo { background: url("{{ assetsDomain }}/images/placeholder-image-of-christelle-malala-for-{{ site.url.production | split: '//' | last | replace: '.', '-dot-' | prepend: 'www-dot-' }}.jpg") center center no-repeat; }
 .img-facebook-image {// background: url("{{ assetsDomain }}/images/placeholder-image-of-christelle-malala-for-{{ site.url.production | split: '//' | last | replace: '.', '-dot-' | prepend: 'www-dot-' }}.jpg") center center no-repeat; }
-.img-avi-photo { background: url("{{ assetsDomain }}/images/placeholder-image-of-christelle-malala-for-www-dot-elletechblog-dot-github-dot-io.jpg") center center no-repeat; }
+.img-avi-photo { background: url("{{ assetsDomain }}/images/placeholder-image-of-christelle-malala-for-www-dot-elletechblog-dot-github-dot-io.jpeg") center center no-repeat; }
 
 .img-matrix,
 .header-banner,
