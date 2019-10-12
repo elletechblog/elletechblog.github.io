@@ -14,7 +14,7 @@ layout: default
 		</nav>
 		
 		<span class="header-logo-bg img-matrix"></span>
-		<a href="{{ pageDomain }}"><img src="{{ assetsDomain }}/images/elletechblog-logo-name_black.png" class="header-logo" alt="ELLETECHblog Logo" title="ELLETECHblog Logo" /></a>
+		<a href="{{ pageDomain }}" class="header-logo"><img src="{{ assetsDomain }}/images/elletechblog-logo-name_black.png" class="header-logo-img" alt="ELLETECHblog Logo" title="ELLETECHblog Logo" /></a>
 		
 		<div class="header-social"><ul class="header-social-list">
 			<li class="header-social-list-item is-child__1">
@@ -34,7 +34,7 @@ layout: default
 	</div>
 	
 	<div class="header-banner">
-		<marquee class="header-banner-marquee">
+		<marquee class="header-banner-marquee" behavior="alternate">
 			<h1 class="header-banner-title f-sH1">
 				<span class="header-banner-title-word header-banner-title-word-1 u-word-special l-word-special-triple">Christ<span class="u-word-special-accent l-word-special-triple-top">elle</span></span>
 				<span class="header-banner-title-word header-banner-title-word-2 u-word-special">speaks</span>
@@ -45,7 +45,7 @@ layout: default
 	</div>
 </header>
 
-<section class="body">
+<section class="body"><div class="body-wrap">
 	{{ content }}
 
 	<footer class="footer">
@@ -64,4 +64,4 @@ layout: default
 		</form>
 		<p class="footer-text">&copy Copyrights {{ site.time | date: "%Y" }} ELLETECHblog. All rights reserved.</p>
 	</footer>
-</section>
+</div></section>
