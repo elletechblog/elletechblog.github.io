@@ -50,9 +50,6 @@ input[type="checkbox"] { visibility: hidden; }
 
 .header-menu-button:hover,
 .header-menu-p,
-.header-social-link:hover .header-social-text,
-.header-social-link:active .header-social-text,
-.header-social-link:focus .header-social-text,
 .header-social-tooltip,
 .header-social-tooltip-link,
 .newsletter-button:hover,
@@ -72,12 +69,16 @@ body, html,
 .header-menu::before { background-color: #fff; }
 body, html,
 .body-content-banner-img { background-color: #fff !important; }
-.header-social-link:hover .header-social-svg,
-.header-social-link:active .header-social-svg,
-.header-social-link:focus .header-social-svg { fill: #fff; }
 
 #page-article .body-author-figure-veil,
 .header-banner-marquee { background-color: rgba(255, 255, 255, .3); }
+
+.header-social-link.is-on:hover .header-social-text,
+.header-social-link.is-on:active .header-social-text,
+.header-social-link.is-on:focus .header-social-text { color: #777; }
+.header-social-link.is-on:hover .header-social-svg,
+.header-social-link.is-on:active .header-social-svg,
+.header-social-link.is-on:focus .header-social-svg { fill: #777; }
 
 .u-word-special-list-item:hover .u-word-special,
 .u-word-special-list-item:active .u-word-special,
@@ -462,8 +463,6 @@ p { padding: .5em; }
 	max-width: 20em;
 	background-color: #fff;
 }
-
-#page-article .header-banner {// width: 100% !important; }
 /*** END PAGES ***/
 
 /*** ANIMATIONS ***/
@@ -615,6 +614,9 @@ p { padding: .5em; }
 
 /*** OVERRIDE ***/
 /*** END OVERRIDE ***/
+
+/*** BETAs ***/
+/*** END BETAs ***/
 
 /*** TO DELETE ***/
 /*** END TO DELETE ***/
